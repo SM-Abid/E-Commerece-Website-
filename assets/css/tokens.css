@@ -1,0 +1,160 @@
+/* ============================================================
+   NOVA — Design Tokens
+   ============================================================ */
+:root {
+  /* Brand: Indigo-Violet signature accent (used sparingly) */
+  --accent-50:  #F1F0FF;
+  --accent-100: #E2DFFF;
+  --accent-200: #C9C2FF;
+  --accent-300: #A89DFB;
+  --accent-400: #8B7BFF;
+  --accent-500: #6D5EF8;   /* primary accent */
+  --accent-600: #5945E6;
+  --accent-700: #4A37C2;
+  --accent-800: #3A2A99;
+  --accent-900: #2A1F70;
+
+  /* Aurora gradient (hero only) */
+  --aurora: linear-gradient(135deg, #8B7BFF 0%, #5DA9FF 40%, #4FE3C0 100%);
+  --aurora-soft: linear-gradient(135deg, #ECE9FF 0%, #E3F0FF 50%, #DFF8EE 100%);
+
+  /* Functional */
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger:  #EF4444;
+  --info:    #3B82F6;
+
+  /* Spacing (8px base) */
+  --s-0: 0;
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-7: 32px;
+  --s-8: 40px;
+  --s-9: 48px;
+  --s-10: 64px;
+  --s-11: 80px;
+  --s-12: 96px;
+  --s-13: 128px;
+
+  /* Radius */
+  --r-1: 4px;
+  --r-2: 8px;
+  --r-3: 12px;
+  --r-4: 16px;
+  --r-5: 20px;
+  --r-6: 28px;
+  --r-full: 999px;
+
+  /* Shadows (light theme baseline) */
+  --shadow-xs: 0 1px 2px rgba(15,18,30,.04);
+  --shadow-sm: 0 2px 6px rgba(15,18,30,.06);
+  --shadow-md: 0 6px 18px rgba(15,18,30,.08);
+  --shadow-lg: 0 18px 40px rgba(15,18,30,.10);
+  --shadow-xl: 0 30px 70px rgba(15,18,30,.14);
+  --shadow-glow: 0 0 0 1px rgba(109,94,248,.18), 0 10px 30px rgba(109,94,248,.18);
+
+  /* Layout */
+  --container: 1320px;
+  --container-px: 24px;
+  --nav-h: 72px;
+  --announce-h: 36px;
+  --bottom-nav-h: 64px;
+
+  /* Motion */
+  --ease: cubic-bezier(.2,.7,.2,1);
+  --ease-out: cubic-bezier(.16,.84,.3,1);
+  --d-1: 120ms;
+  --d-2: 200ms;
+  --d-3: 320ms;
+  --d-4: 480ms;
+
+  /* Type scale */
+  --font-sans: "Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Inter", "SF Pro Display", sans-serif;
+  --font-mono: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+
+  /* Light theme tokens */
+  --bg:        #FFFFFF;
+  --bg-soft:   #FAFAFB;
+  --bg-muted:  #F4F4F7;
+  --surface:   #FFFFFF;
+  --surface-2: #F7F7FA;
+  --surface-3: #EFEFF4;
+  --border:    #E6E6EC;
+  --border-strong: #D7D7E0;
+  --text:      #0B0C10;
+  --text-muted:#5B5C66;
+  --text-soft: #8A8B96;
+  --text-inv:  #FFFFFF;
+  --link:      var(--accent-600);
+  --overlay:   rgba(11,12,16,.55);
+  --glass:     rgba(255,255,255,.72);
+  --glass-strong: rgba(255,255,255,.88);
+
+  /* z-index */
+  --z-nav: 60;
+  --z-drawer: 80;
+  --z-modal: 90;
+  --z-toast: 100;
+  --z-ai: 95;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg:        #0A0B10;
+  --bg-soft:   #0F1117;
+  --bg-muted:  #14171F;
+  --surface:   #12141B;
+  --surface-2: #181B24;
+  --surface-3: #1F2330;
+  --border:    #232636;
+  --border-strong: #2E3245;
+  --text:      #ECECF1;
+  --text-muted:#A2A4B2;
+  --text-soft: #6C6E7C;
+  --text-inv:  #0A0B10;
+  --link:      var(--accent-300);
+  --overlay:   rgba(0,0,0,.7);
+  --glass:     rgba(18,20,27,.72);
+  --glass-strong: rgba(18,20,27,.92);
+  --aurora-soft: linear-gradient(135deg, #1B1735 0%, #14283E 50%, #0F2E2A 100%);
+  --shadow-xs: 0 1px 2px rgba(0,0,0,.4);
+  --shadow-sm: 0 2px 6px rgba(0,0,0,.4);
+  --shadow-md: 0 8px 22px rgba(0,0,0,.5);
+  --shadow-lg: 0 22px 50px rgba(0,0,0,.55);
+  --shadow-xl: 0 36px 90px rgba(0,0,0,.65);
+  --shadow-glow: 0 0 0 1px rgba(139,123,255,.35), 0 10px 30px rgba(109,94,248,.35);
+}
+
+/* Auto theme */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:        #0A0B10;
+    --bg-soft:   #0F1117;
+    --bg-muted:  #14171F;
+    --surface:   #12141B;
+    --surface-2: #181B24;
+    --surface-3: #1F2330;
+    --border:    #232636;
+    --border-strong: #2E3245;
+    --text:      #ECECF1;
+    --text-muted:#A2A4B2;
+    --text-soft: #6C6E7C;
+    --text-inv:  #0A0B10;
+    --link:      var(--accent-300);
+    --overlay:   rgba(0,0,0,.7);
+    --glass:     rgba(18,20,27,.72);
+    --glass-strong: rgba(18,20,27,.92);
+    --aurora-soft: linear-gradient(135deg, #1B1735 0%, #14283E 50%, #0F2E2A 100%);
+    --shadow-xs: 0 1px 2px rgba(0,0,0,.4);
+    --shadow-sm: 0 2px 6px rgba(0,0,0,.4);
+    --shadow-md: 0 8px 22px rgba(0,0,0,.5);
+    --shadow-lg: 0 22px 50px rgba(0,0,0,.55);
+    --shadow-xl: 0 36px 90px rgba(0,0,0,.65);
+    --shadow-glow: 0 0 0 1px rgba(139,123,255,.35), 0 10px 30px rgba(109,94,248,.35);
+  }
+}
