@@ -408,14 +408,11 @@ Pull requests are welcome.
 
 ---
 
-## Credits & licence
+## Credits
 
 - **Photography** — [Unsplash](https://unsplash.com)
 - **Typeface** — [Inter](https://rsms.me/inter/) by Rasmus Andersson
 - **Icons** — hand-authored inline SVG
-
-Licensed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
-
 ---
 
 <div align="center">
